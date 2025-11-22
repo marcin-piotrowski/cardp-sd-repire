@@ -14,6 +14,9 @@ public:
     bool flush() override;
 
 private:
-    sdmmc_card_t *card_ = nullptr;
+    sdmmc_host_t host_{};
+    sdmmc_slot_config_t slot_config_{};
+    sdmmc_card_t card_{};
+    bool ready_ = false;
 };
 

@@ -11,6 +11,9 @@ constexpr size_t kSectorSize = 512;
 using Sector = std::array<uint8_t, kSectorSize>;
 
 struct CardGeometry {
+    constexpr CardGeometry() = default;
+    constexpr CardGeometry(uint32_t sector_size, uint64_t sector_count)
+        : sector_size(sector_size), sector_count(sector_count) {}
     uint32_t sector_size = kSectorSize;
     uint64_t sector_count = 0;
 };
