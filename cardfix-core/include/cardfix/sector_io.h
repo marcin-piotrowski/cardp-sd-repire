@@ -1,12 +1,13 @@
 #pragma once
 
 #include <array>
+#include <cstddef>
 #include <cstdint>
 #include <vector>
 
 namespace cardfix {
 
-constexpr size_t kSectorSize = 512;
+constexpr std::size_t kSectorSize = 512;
 
 using Sector = std::array<uint8_t, kSectorSize>;
 
